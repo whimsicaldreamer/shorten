@@ -1,0 +1,6 @@
+{
+  "name": "shortener",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./Shortener.js"
+}

@@ -1,0 +1,108 @@
+.App {
+    text-align: center;
+}
+.navBar {
+    background-color: #334551;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+.navBar > .content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.brand {
+    font-size: 2em;
+    font-family: GoogleSans-Medium, "sans-serif";
+    color: #FFFFFF;
+    cursor: default;
+}
+.navigation {
+    display: flex;
+}
+.navigation > a {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-family: Roboto-Medium, "sans-serif";
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #5B8DE1;
+    user-select: none;
+    cursor: pointer;
+}
+.mainContainer > .container > .navigation > a {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.navigation > a.inverted {
+    background-color: transparent;
+    border-radius: 0;
+}
+.navigation > a.inverted:hover {
+    color: #5B8DE1;
+}
+.mainContainer {
+    background-color: #334551;
+    display: flex;
+    flex: 1;
+    min-height: 70vh;
+    width: 100%;
+}
+.mainContainer > .container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.mainContainer > .container > h1 {
+    font-family: GoogleSans-Medium, "sans-serif";
+    font-size: 2em;
+    color: #FFFFFF;
+    user-select: none;
+}
+.mainContainer > .container > h3 {
+    font-family: Roboto, "sans-serif";
+    font-weight: lighter;
+    font-size: 1em;
+    margin-top: -10px;
+    color: #FFFFFF;
+    user-select: none;
+}
+
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 576px) {
+    .navBar > .content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+    .mainContainer > .container {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .mainContainer > .container > h1 {
+        font-size: 2.5em;
+    }
+    .mainContainer > .container > h3 {
+        font-size: 1.25em;
+    }
+}
+
+/** Large devices (desktops, 992px and up) **/
+@media (min-width: 992px) {
+}
+
+/** Extra large devices (large desktops, 1200px and up) **/
+@media (min-width: 1200px) {}

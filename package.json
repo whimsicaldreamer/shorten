@@ -1,0 +1,14 @@
+{
+  "name": "url-shortener",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "cd server && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  },
+  "author": "Ayan Dey"
+}

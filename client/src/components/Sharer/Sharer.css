@@ -1,0 +1,47 @@
+.share-brands {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.share-title {
+    font-size: 20px;
+    font-family: GoogleSans-Medium, "sans-serif";
+}
+.share-opt {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: Roboto, "sans-serif";
+    display: flex;
+    align-items: center;
+}
+.share-opt > a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.share-opt > a > div {
+    display: flex;
+    font-size: 24px;
+    width: 26px;
+    justify-content: center;
+    margin-right: 10px;
+}
+.share-opt > div {
+    display: flex;
+    font-size: 24px;
+    width: 26px;
+    justify-content: center;
+    margin-right: 10px;
+}
+#facebook > div > * {
+    color: #3b5998;
+}
+#twitter > div > * {
+    color: #1da1f2;
+}
+#whatsapp > div > * {
+    color: #075e54;
+}
