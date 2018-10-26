@@ -4,8 +4,8 @@ const Urls      = require("../models/urls");
 
 const url = {
     shorten: (req, res) => {
-        const longUrl =  (req.body.longUrl).trim();
-        const alias = (req.body.alias).trim();
+        const longUrl = req.body.longUrl ? (req.body.longUrl).trim() : "";
+        const alias = req.body.alias ? (req.body.alias).trim() : "";
 
         if(isURL(longUrl)) {
             if(!alias) {
