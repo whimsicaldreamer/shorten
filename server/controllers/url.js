@@ -59,7 +59,7 @@ const url = {
             return res.status(400).send({status: "INVALID_URL"});
         }
     },
-    redirect: (req, res) => {
+    redirect: async (req, res) => {
         const shortCode = req.params.id;
 
         if(!isUrlSafe(shortCode)) {
@@ -67,21 +67,20 @@ const url = {
             return res.status(404).redirect("/");
         }
 
-        Urls.findOne({shortCode: shortCode})
-            .then(response => {
-                if(response) {
-                    // Redirect to original URL
-                    res.redirect(response.longUrl);
-                }
-                else {
-                    // Redirect to 404
-                    return res.status(404).end();
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                return res.status(500).send({ status: "FAILED" });
-            })
+        try {
+            let url = await Urls.findOne({shortCode: shortCode});
+
+            if(!url) {
+                // Redirect to 404
+                return res.status(404).end();
+            }
+            // Redirect to original URL
+            res.redirect(url.longUrl);
+        }
+        catch(error) {
+            console.log(error);
+            return res.status(500).send({ status: "FAILED" });
+        }
     }
 };
 
