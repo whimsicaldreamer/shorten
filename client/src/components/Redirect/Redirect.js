@@ -24,7 +24,7 @@ function ErrorMsg(props) {
     if(errorType === "NOT_FOUND") {
         return (
             <Fragment>
-                <p>404: Page Not Found - The page <strong>https://examp.le/1234</strong> does not exist.</p>
+                <p>404: Page Not Found - The page <strong>{ window.location.href }</strong> does not exist.</p>
                 <p>If you typed in or copied/pasted this URL, make sure you included all the characters, with no extra punctuation.</p>
             </Fragment>
         )
