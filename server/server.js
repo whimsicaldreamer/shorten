@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 const mongoDb = require("./config/mongoDB");
@@ -8,12 +9,13 @@ const port = process.env.PORT || 3001;
 const urlController = require("./controllers/url");
 
 // Parsers
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // APIs
 app.post("/api/url", urlController.shorten);
-app.get("/:id", urlController.redirect);
+app.get("/api/:id", urlController.redirect);
 
 
 // Start server

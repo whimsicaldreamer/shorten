@@ -1,0 +1,51 @@
+.navBar {
+    background-color: #334551;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+.navBar > .content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.brand {
+    font-size: 2em;
+    font-family: GoogleSans-Medium, "sans-serif";
+    color: #FFFFFF;
+    cursor: default;
+}
+.navigation {
+    display: flex;
+}
+.navigation > a {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-family: Roboto-Medium, "sans-serif";
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #5B8DE1;
+    user-select: none;
+    cursor: pointer;
+}
+
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 576px) {
+    .navBar > .content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {}
+
+/** Large devices (desktops, 992px and up) **/
+@media (min-width: 992px) {}
+
+/** Extra large devices (large desktops, 1200px and up) **/
+@media (min-width: 1200px) {}

@@ -2,7 +2,7 @@ const isURL     = require("is-url");
 const Keys      = require("../models/keys");
 const Urls      = require("../models/urls");
 
-const domain    = "localhost:3001/";
+const domain    = "localhost:3000/";
 
 const url = {
     shorten: async (req, res) => {
@@ -63,19 +63,20 @@ const url = {
         const shortCode = req.params.id;
 
         if(!isUrlSafe(shortCode)) {
-            // Redirect to 404
-            return res.status(404).redirect("/");
+            // Send 404
+            return res.status(404).send({ status: "NOT_FOUND" });
         }
 
         try {
-            let url = await Urls.findOne({shortCode: shortCode});
+            let url = await Urls.findOne({ shortCode: shortCode });
 
             if(!url) {
-                // Redirect to 404
-                return res.status(404).end();
+                // Send 404
+                return res.status(404).send({ status: "NOT_FOUND" });
             }
             // Redirect to original URL
-            res.redirect(url.longUrl);
+            //res.redirect(url.longUrl);
+            return res.status(200).send({ status: "FOUND", url: url.longUrl });
         }
         catch(error) {
             console.log(error);
