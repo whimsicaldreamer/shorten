@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 app.post("/api/url", urlController.shorten);
 app.get("/api/:id", urlController.redirect);
 
+app.get('*', (req, res) => {
+    return res.status(404).send({ status: "NOT_FOUND" });
+});
 
 // Start server
 app.listen(port, () => console.log(`Server running on port ${port}...`));

@@ -49,9 +49,9 @@ class Redirect extends Component {
     }
 
     componentDidMount() {
-        let id = this.props.match.params.id;
+        let id = this.props.location.pathname;
 
-        axios.get(`/api/${id}`)
+        axios.get(`/api${id}`)
             .then(response => {
                 window.location.replace(response.data.url);
             })
