@@ -1,13 +1,40 @@
-# SHORTEN
-###### A simple url shortener built for fun
+# Shorten  
+![development status](https://img.shields.io/badge/status-Work%20In%20Progress-yellow.svg?style=flat-square)
 
-This project is under development and not ready for production use.
+Shorten is a simple URL shortener.
 
-### How to run?  
- - **Clone the repo**
- - **Do `yarn install` in both client and server directories**
- - **Run client side: `yarn client`**  
-   **Run Server side: `yarn server`**  
-   _**--OR--**_  
-   **Run both together: `yarn dev`**
- - **Generate unique keys by running the `keyGenerator.js` in the `server/utils` directory**
+### Installation  
+
+Install the dependencies, devDependencies and start the app.
+
+```sh
+$ git clone https://github.com/whimsicaldreamer/shorten.git
+$ cd shorten
+$ yarn installer
+$ yarn generate
+$ yarn dev
+```
+
+##### OPTIONS  
+You can run the following commands using `yarn <COMMAND>` from your terminal depending on your use case.
+
+| Commands | Usage |
+| ------ | ------ |
+| `install-client` | Installs all dependencies for the client side |
+| `install-server` | Installs all dependencies for the server side |
+| `installer`      | Installs all dependencies for the whole app |
+| `client`         | Starts the client server on **`localhost:3000`** |
+| `server`         | Starts the backend server on **`localhost:3001`** |
+| `dev`            | Starts the whole app for development |
+| `generate`       | Generates unique short keys |
+
+
+# Contribution
+
+Want to contribute? Great!  
+**Fork the repo and send a pull request.**
+
+
+# License
+
+MIT
