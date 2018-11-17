@@ -15,8 +15,8 @@ $ yarn generate
 $ yarn dev
 ```
 
-##### OPTIONS  
-You can run the following commands using `yarn <COMMAND>` from your terminal depending on your use case.
+#### OPTIONS  
+You can run the following commands using **`yarn <COMMAND>`** from your terminal depending on your use case.
 
 | Commands | Usage |
 | ------ | ------ |
