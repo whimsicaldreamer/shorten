@@ -47,6 +47,9 @@ class Shortener extends Component {
                         case "INVALID_ALIAS":
                             msg = "Aliases can contain only A-Z, a-z, 0-9, -, _ only.";
                             break;
+                        case "ALIAS_TOO_LONG":
+                            msg = "Aliases can be of max 10 characters";
+                            break;
                         case "DUPLICATE":
                             msg = "The alias already exists.";
                             break;

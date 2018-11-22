@@ -7,7 +7,7 @@
 console.log("KEY GENERATION SERVICE STARTING...");
 
 const config    = require("../config/env");
-const mongoDb = require("../config/mongoDB");
+const mongoDb   = require("../config/mongoDB");
 const Keys      = require("../models/keys");
 const Hashids   = require("hashids");
 const shortid   = require("shortid");

@@ -19,7 +19,12 @@ const url = {
                  */
                 if(alias) { // When alias parameter is enabled
                     if(isUrlSafe(alias)) { // Check if the alias is URL safe
-                        saveUrl(res, longUrl, alias);
+                        if(alias.length <= 10) { // MAX alias length to be 10 chars
+                            saveUrl(res, longUrl, alias);
+                        }
+                        else {
+                            return res.status(400).send({status: "ALIAS_TOO_LONG"});
+                        }
                     }
                     else {
                         return res.status(400).send({status: "INVALID_ALIAS"});
