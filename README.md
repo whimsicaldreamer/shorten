@@ -37,4 +37,4 @@ Want to contribute? Great!
 
 # License
 
-MIT
+GNU GPLv3
