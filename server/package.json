@@ -8,7 +8,7 @@
     "start": "nodemon server.js",
     "generate-keys": "cd utils && node keyGenerator.js"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
